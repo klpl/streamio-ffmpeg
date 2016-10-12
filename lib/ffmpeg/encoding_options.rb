@@ -189,8 +189,7 @@ module FFMPEG
     end
 
     def convert_custom(value)
-      raise ArgumentError unless value.class <= Array
-      value
+      Array.wrap(value)
     end
 
     def k_format(value)
