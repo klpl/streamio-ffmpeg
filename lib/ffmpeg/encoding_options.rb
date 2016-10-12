@@ -189,7 +189,7 @@ module FFMPEG
     end
 
     def convert_custom(value)
-      Array.wrap(value)
+      Array.wrap(value.to_s.presence)
     end
 
     def k_format(value)
